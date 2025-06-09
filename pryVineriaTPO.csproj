@@ -1,0 +1,353 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{003AC23F-4E55-4F20-B6C4-EDE3E01E6246}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>pryVineriaTPO</RootNamespace>
+    <AssemblyName>pryVineriaTPO</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Administrador\fmrBuscarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\fmrBuscarCliente.Designer.cs">
+      <DependentUpon>fmrBuscarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\fmrBuscarVendedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\fmrBuscarVendedor.Designer.cs">
+      <DependentUpon>fmrBuscarVendedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="clsClientes.cs" />
+    <Compile Include="clsVendedores.cs" />
+    <Compile Include="Administrador\fmrAgregarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\fmrAgregarCliente.Designer.cs">
+      <DependentUpon>fmrAgregarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="clsVenta.cs" />
+    <Compile Include="fmrAgregarNuevoProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmrAgregarNuevoProducto.Designer.cs">
+      <DependentUpon>fmrAgregarNuevoProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fmrAgregarProductosStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmrAgregarProductosStock.Designer.cs">
+      <DependentUpon>fmrAgregarProductosStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\fmrAgregarVendedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\fmrAgregarVendedor.Designer.cs">
+      <DependentUpon>fmrAgregarVendedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas\fmrAgregarVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas\fmrAgregarVenta.Designer.cs">
+      <DependentUpon>fmrAgregarVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\fmrEliminarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\fmrEliminarCliente.Designer.cs">
+      <DependentUpon>fmrEliminarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\fmrEliminarVendedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\fmrEliminarVendedor.Designer.cs">
+      <DependentUpon>fmrEliminarVendedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas\fmrEliminarVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas\fmrEliminarVenta.Designer.cs">
+      <DependentUpon>fmrEliminarVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presupuestos\fmrGenerarPresupuesto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presupuestos\fmrGenerarPresupuesto.Designer.cs">
+      <DependentUpon>fmrGenerarPresupuesto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presupuestos\fmrConsultarPresupuesto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presupuestos\fmrConsultarPresupuesto.Designer.cs">
+      <DependentUpon>fmrConsultarPresupuesto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\fmrModificarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\fmrModificarCliente.Designer.cs">
+      <DependentUpon>fmrModificarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presupuestos\fmrModificarPresupuesto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presupuestos\fmrModificarPresupuesto.Designer.cs">
+      <DependentUpon>fmrModificarPresupuesto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fmrModificarProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmrModificarProductos.Designer.cs">
+      <DependentUpon>fmrModificarProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stock\fmrModificarStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stock\fmrModificarStock.Designer.cs">
+      <DependentUpon>fmrModificarStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\fmrModificarVendedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\fmrModificarVendedor.Designer.cs">
+      <DependentUpon>fmrModificarVendedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas\fmrEstadisticas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas\fmrEstadisticas.Designer.cs">
+      <DependentUpon>fmrEstadisticas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas\fmrListadoVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas\fmrListadoVentas.Designer.cs">
+      <DependentUpon>fmrListadoVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas\fmrModificarVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas\fmrModificarVenta.Designer.cs">
+      <DependentUpon>fmrModificarVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stock\fmrVisualizacionStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stock\fmrVisualizacionStock.Designer.cs">
+      <DependentUpon>fmrVisualizacionStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Administrador\fmrAgregarCliente.resx">
+      <DependentUpon>fmrAgregarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\fmrBuscarCliente.resx">
+      <DependentUpon>fmrBuscarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\fmrBuscarVendedor.resx">
+      <DependentUpon>fmrBuscarVendedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmrAgregarNuevoProducto.resx">
+      <DependentUpon>fmrAgregarNuevoProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmrAgregarProductosStock.resx">
+      <DependentUpon>fmrAgregarProductosStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\fmrAgregarVendedor.resx">
+      <DependentUpon>fmrAgregarVendedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventas\fmrAgregarVenta.resx">
+      <DependentUpon>fmrAgregarVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presupuestos\fmrConsultarPresupuesto.resx">
+      <DependentUpon>fmrConsultarPresupuesto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\fmrEliminarCliente.resx">
+      <DependentUpon>fmrEliminarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\fmrEliminarVendedor.resx">
+      <DependentUpon>fmrEliminarVendedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventas\fmrEliminarVenta.resx">
+      <DependentUpon>fmrEliminarVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presupuestos\fmrGenerarPresupuesto.resx">
+      <DependentUpon>fmrGenerarPresupuesto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\fmrModificarCliente.resx">
+      <DependentUpon>fmrModificarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presupuestos\fmrModificarPresupuesto.resx">
+      <DependentUpon>fmrModificarPresupuesto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmrModificarProductos.resx">
+      <DependentUpon>fmrModificarProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stock\fmrModificarStock.resx">
+      <DependentUpon>fmrModificarStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\fmrModificarVendedor.resx">
+      <DependentUpon>fmrModificarVendedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventas\fmrEstadisticas.resx">
+      <DependentUpon>fmrEstadisticas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventas\fmrListadoVentas.resx">
+      <DependentUpon>fmrListadoVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventas\fmrModificarVenta.resx">
+      <DependentUpon>fmrModificarVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stock\fmrVisualizacionStock.resx">
+      <DependentUpon>fmrVisualizacionStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\favicon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\favicon1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\favicon2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\favicon3.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\favicon4.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\favicon5.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\favicon6.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\favicon7.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\favicon8.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wine-corks-table %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cellar-lined-with-rows-stored-wine-bottles.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\top-view-fresh-black-grapes-wine-glass-wine-bottle-dark-background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\uncorking-bottle-red-wine.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wine-corks-table %281%291.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Diseño sin título %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Diseño sin título.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Diseño sin título %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Diseño sin título %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Presupuesto\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo gran reserva PNG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Diseño sin título %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\favicon9.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grafico-de-barras.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
